@@ -3219,7 +3219,7 @@
   "http://120.40.39.246:352/newlive/live/hls/31/live.m3u8": 2,
   "http://153.0.171.163:85/tsfile/live/0130_1.m3u8?authid=0&key=txiptv&playlive=1": 0,
   "https://live.264788.xyz/channel/anhuiweishi?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=8f6ba7f0abf067bd6d93c7b58ec3d86f": 0,
-  "https://live.264788.xyz/channel/anhuiweishi?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=cd2aa71eb7ee9609b9cd182fa1ed7fc0": 2,
+  "https://live.264788.xyz/channel/anhuiweishi?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=cd2aa71eb7ee9609b9cd182fa1ed7fc0": 0,
   "http://[2409:8087:74f0:22::7]:6410/270000001128/9900000514/index.m3u8?Contentid=9900000514&channel-id=newtv&livemode=4": 2,
   "http://120.76.248.139/live/bfgd/4200000096.m3u8": 0,
   "http://23.237.228.134/live8/anhui.m3u8": 2,
@@ -3750,7 +3750,7 @@
   "https://live.264788.xyz/channel/jiangsuweishi?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=2e3c19907f83ee49962e7a3b1db2c093": 0,
   "http://223.95.198.3:8000/hls/28/index.m3u8": 0,
   "https://svipsvip.ffzyread1.com/20250101/34720_0d5e4b60/index.m3u8": 2,
-  "https://live.264788.xyz/channel/jiangsuweishi4k?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=306fa7c5a3bb1b091331de3a638c01b0": 2,
+  "https://live.264788.xyz/channel/jiangsuweishi4k?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=306fa7c5a3bb1b091331de3a638c01b0": 0,
   "http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/jswshd265/54/20200407/01.m3u8?Channel_ID=0116_2600031500-99000-200300140100004&HlsProfileId=1&HlsSubType=1&ParentNodeID=-99&ProgramID=623899368&SecurityKey=20260424110432&appCode=miguvideo_android&assertID=5500199408&bean=mgspad&client_ip=42.49.76.244&conFee=0&ct=android&encrypt=eae2098c8086f215cfb9f8d9b7e4e6ce&is_advertise=0&jid=4f89b0f1d885527a227fd4a636419cfe1776999868409V&mcid=500020&msisdn=4f89b0f1d885527a227fd4a636419cfe&mtv_session=b81cbfe3c943f249548e7c2b5d376371&mvid=5100156802&netType=4&nphaid=0&pid=2028597139&playUrlSsn=4f89b0f1d885527a227fd4a636419cfe1776999868937&playurlVersion=ZQ-A1-9.3.2-RELEASE&prlId=4f89b0f1d885527a227fd4a636419cfe1776999868946&sid=5500199408&sjid=subsession_1776999974588&spid=699067&sv=10004&tid=android&timestamp=20260424110432&videocodec=h265": 1,
   "http://k.061899.xyz/k.php?id=jsws": 0,
   "http://183.214.23.16:2380/hw1live.rxip.sc96655.com.huan.tv/live/jswsH265_4000.m3u8": 2,
@@ -10960,5 +10960,6 @@
   "https://iptv.catvod.com/live.php?id=%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86&line=3%24LR%E2%80%A29%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF7%E3%80%8F": 0,
   "https://iptv.catvod.com/live.php?id=%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86&line=1%24LR%E2%80%A29%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF5%E3%80%8F": 0,
   "https://iptv.catvod.com/live.php?id=%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86&line=4%24LR%E2%80%A29%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF8%E3%80%8F": 0,
-  "https://iptv.catvod.com/live.php?id=%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86&line=2%24LR%E2%80%A29%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF6%E3%80%8F": 0
+  "https://iptv.catvod.com/live.php?id=%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86&line=2%24LR%E2%80%A29%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF6%E3%80%8F": 0,
+  "https://live.264788.xyz/channel/chcdongzuodianying?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=87c13b6e841ed5039d4c2ce8f266f9ef": 0
 }
