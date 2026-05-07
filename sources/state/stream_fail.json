@@ -3026,7 +3026,7 @@
   "http://38.75.136.137:98/gslb/dsdqpub/tjwshd.m3u8": 2,
   "http://111.160.17.2:59901/tsfile/live/0001_21.m3u8?authid=0&key=txiptv&playlive=1": 2,
   "http://[2409:8087:1a0a:df::404b]/ottrrs.hl.chinamobile.com/TVOD/88888888/224/3221226459/index.m3u8": 2,
-  "http://182.150.23.74:808/hls/27/index.m3u8": 2,
+  "http://182.150.23.74:808/hls/27/index.m3u8": 0,
   "http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/8/3221226459/index.m3u8": 2,
   "http://k.061899.xyz/k.php?id=tjws": 0,
   "http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226204/index.m3u8": 2,
@@ -10976,5 +10976,6 @@
   "https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4k_mbd.m3u8?auth_key=1778169600-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-c0dc975989938dd3c8d2ca705ceb5311&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c": 0,
   "https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4_mbd.m3u8?auth_key=1778169600-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-016cbedbf79c007453db0e64484aa89b&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c": 0,
   "http://14.29.45.71/tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsBindIP=2&wsIPSercert=f1ed5e80c31ab65580d88c6bbb451005&wsSecret=ac2c8515553d544228b4aa1a5334afc7&wsSession=cee2d3e88e6b4f37c11c4611-177811601079347&wsTime=1778128731&wsserid=1168265744816512145": 0,
-  "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=34670d6afe2eab39bb2d1e904e3f1040&wsTime=1778133676": 0
+  "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=34670d6afe2eab39bb2d1e904e3f1040&wsTime=1778133676": 0,
+  "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=3dc40b4f3d59029a960556d4ddb39fca&wsTime=1778140707": 0
 }
