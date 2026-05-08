@@ -936,7 +936,7 @@
   "http://z.b.bkpcp.top/m.php?id=cctv2": 0,
   "https://piccpndali.v.myalicdn.com/audio/cctv2_2.m3u8": 2,
   "http://218.13.170.98:9901/tsfile/live/0002_1.m3u8": 2,
-  "http://61.184.46.85:85/tsfile/live/0002_1.m3u8?authid=0%24%E8%8D%86%E5%B7%9E%E7%94%B5%E4%BF%A1&key=txiptv&playlive=1": 2,
+  "http://61.184.46.85:85/tsfile/live/0002_1.m3u8?authid=0%24%E8%8D%86%E5%B7%9E%E7%94%B5%E4%BF%A1&key=txiptv&playlive=1": 0,
   "http://120.87.19.109:80/PLTV/88888973/224/3221225738/10000100000000060000000000334543_0.smil/01.m3u8?accountinfo=UoQbCSdhOfs+Fhzpjb+WON1faRQ9pU15SBx6EULzJM%2Fq63EjPL5%2FUXSVfEKzDq3x9ZwJZK5v8A25s5ynmqdLpAWZ1F4+6A1eDkDeh5XZlpvpn23wIF+ldb6dnBPa8zHj%2CEND&fmt=ts2hls%2C244%2C01.m3u8&tenantId=8601": 2,
   "http://[2409:8087:4c0a:22:1::11]:6410/170000001115/UmaiCHAN638727c125355/index.m3u8?AuthInfo=9kOOdBn7MFF%2F2bWjKgahUSPTZ4CK5oLfjaEYe9dogNMUNNEYLCPUtKY62j1Wp5u04wipypKUQ1TTuR2lXvBl5YpHqBJmlA19x22TD9bUOjk": 2,
   "http://hlsztemgsplive.miguvideo.com:8080/wd_r2/2018/ocn/cctv3hd/2000/01.m3u8?Channel_ID=0116_2600031500-99000-200300140100004&HlsProfileId=1&HlsSubType=1&ParentNodeID=-99&ProgramID=624878271&SecurityKey=20260424114239&appCode=miguvideo_android&assertID=5500212864&bean=mgspad&client_ip=221.234.44.13&conFee=0&ct=android&encrypt=d4a178e2abce7e8af161f913f5e170dd&is_advertise=0&jid=4f89b0f1d885527a227fd4a636419cfe1777002156432V&mcid=500020&msisdn=4f89b0f1d885527a227fd4a636419cfe&mtv_session=5e4a0d46367f9b2fde25215a753d0d07&mvid=5100001683&netType=4&nphaid=0&pid=2028597139&playUrlSsn=4f89b0f1d885527a227fd4a636419cfe1777002156747&playurlVersion=ZQ-A1-9.3.2-RELEASE&prlId=4f89b0f1d885527a227fd4a636419cfe1777002156761&sid=5500212864&sjid=subsession_1777002257238&spid=699004&sv=10004&tid=android&timestamp=20260424114239&videocodec=h264": 1,
@@ -11190,5 +11190,9 @@
   "http://fuxin.yunjifei.top:999/tsfile/live/0128_1.m3u8?authid=0&key=txiptv&playlive=1": 0,
   "https://t.freetv.fun/live/shan-dong-wei-shi-6.php": 0,
   "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=3975cac371c096313679b797415c7d4b&wsTime=1778234308": 0,
-  "http://fuxin.yunjifei.top:999/tsfile/live/0016_1.m3u8?authid=0&key=txiptv&playlive=1": 0
+  "http://fuxin.yunjifei.top:999/tsfile/live/0016_1.m3u8?authid=0&key=txiptv&playlive=1": 0,
+  "https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4k_mbd.m3u8?auth_key=1778281200-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-8d26c8f3602014ac79da21bc0ce24188&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c": 0,
+  "https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4_mbd.m3u8?auth_key=1778281200-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-1435a1e21b98ea3541c92875ca290d1f&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c": 0,
+  "http://183.10.180.202:212/tsfile/live/1019_1.m3u8": 0,
+  "http://183.10.180.202:212/tsfile/live/1022_1.m3u8": 0
 }
