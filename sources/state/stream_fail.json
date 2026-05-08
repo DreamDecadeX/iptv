@@ -1452,7 +1452,7 @@
   "http://38.75.136.137:98/gslb/dsdqca/jlwshd.m3u8": 2,
   "http://116.149.160.228:9003//hls/5/index.m3u8": 2,
   "http://60.10.139.113:8801/hls/15/index.m3u8": 0,
-  "http://182.150.23.74:808/hls/16/index.m3u8": 2,
+  "http://182.150.23.74:808/hls/16/index.m3u8": 0,
   "http://219.150.217.47:6610/PLTV1/380/index.m3u8?icpid=dxrm1": 2,
   "http://61.184.46.85:85/tsfile/live/0005_1.m3u8?authid=0%24%C3%A8%EF%BF%BD%E2%80%A0%C3%A5%C2%B7%EF%BF%BD%C3%A7%E2%80%9D%C2%B5%C3%A4%C2%BF%C2%A1&key=txiptv&playlive=1": 2,
   "http://10.255.126.3:8006/AHBKLIVE/11111120220816000000000000000003$安徽联通专用": 2,
@@ -1657,7 +1657,7 @@
   "https://live.264788.xyz/channel/cctv7?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=043ecb8ede7fbe890d88633af70d7cb3": 0,
   "http://221.181.100.64/gslbserv.itv.cmvideo.cn/1.m3u8?Contentid=3000000010000011518&channel-id=FifastbLive&livemode=1&stbId=m": 2,
   "http://119.29.13.205:1234/673168121": 2,
-  "http://fm1077.serv00.net/Smart.php?id=cctv7%24LR%E2%80%A215%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF15%E3%80%8F": 1,
+  "http://fm1077.serv00.net/Smart.php?id=cctv7%24LR%E2%80%A215%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF15%E3%80%8F": 0,
   "http://221.181.100.64/gslbserv.itv.cmvideo.cn/1.m3u8?Contentid=3000000020000011522&channel-id=FifastbLive&livemode=1&stbId=m": 2,
   "http://gfr.x3322.net:9901/tsfile/live/1072_1.m3u8": 2,
   "http://111.29.9.40:6610/000000001000/1000000001000017218/index.m3u8?Contentid=1000000001000017218&channel-id=ystenlive&livemode=1&stbId=3": 2,
@@ -3085,7 +3085,7 @@
   "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226954/1.m3u8?GuardEncType=2&accountinfo=~~V2.0~af3wyULP1h575eM_4ByMDg~tP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND": 2,
   "http://124.236.93.22:2380/ywotttv.bj.chinamobile.com/TVOD/88888888/224/3221226502/1.m3u8": 2,
   "http://61.136.172.236:9901/tsfile/live/0135_1.m3u8": 2,
-  "http://111.61.236.247:9081/hls/29/index.m3u8": 2,
+  "http://111.61.236.247:9081/hls/29/index.m3u8": 0,
   "http://tvbox6.icu/tv/migu.php?id=nxws%24LR%E2%80%A212%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF2%E3%80%8F": 2,
   "http://go.bkpcp.top/mg/nxws": 2,
   "http://[2409:8087:1a01:df::7005]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225632/index.m3u8": 2,
@@ -3193,7 +3193,7 @@
   "https://live.264788.xyz/channel/anhuiweishi?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=fb8fe141f6787a1c084cd093425acf4d": 0,
   "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?Contentid=1000000001000030159&channel-id=FifastbLive&livemode=1&mode=1&stbId=yu": 2,
   "http://101.35.240.114:88/live.php?id=%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86": 2,
-  "http://182.150.23.74:808/hls/25/index.m3u8": 2,
+  "http://182.150.23.74:808/hls/25/index.m3u8": 0,
   "http://222.169.85.8:9901/tsfile/live/0130_1.m3u8": 2,
   "http://111.61.236.247:9081/hls/27/index.m3u8": 0,
   "http://192.151.150.154/live/ahwshd.m3u8": 0,
@@ -11189,5 +11189,6 @@
   "http://fm1077.serv00.net/Smart.php?id=cctv13%24LR%E2%80%A217%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF17%E3%80%8F": 0,
   "http://fuxin.yunjifei.top:999/tsfile/live/0128_1.m3u8?authid=0&key=txiptv&playlive=1": 0,
   "https://t.freetv.fun/live/shan-dong-wei-shi-6.php": 0,
-  "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=3975cac371c096313679b797415c7d4b&wsTime=1778234308": 0
+  "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=3975cac371c096313679b797415c7d4b&wsTime=1778234308": 0,
+  "http://fuxin.yunjifei.top:999/tsfile/live/0016_1.m3u8?authid=0&key=txiptv&playlive=1": 0
 }
