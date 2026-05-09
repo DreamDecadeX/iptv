@@ -4993,7 +4993,7 @@
   "https://migu.188766.xyz?id=%E9%99%95%E8%A5%BF%E5%8D%AB%E8%A7%86&migutoken=e574660a9a85fd77ae197b6b4dfffcef&type=yy": 2,
   "http://60.10.139.113:8801/hls/53/index.m3u8": 0,
   "http://183.11.239.36:808/hls/58/index.m3u8": 2,
-  "https://live.264788.xyz/channel/shaanxiweishi?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=9dc887dba8ecb4e4143baf4f2373800c": 2,
+  "https://live.264788.xyz/channel/shaanxiweishi?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=9dc887dba8ecb4e4143baf4f2373800c": 0,
   "http://[2409:8087:1a01:df::7005]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225625/index.m3u8": 2,
   "http://112.27.235.94:8000/hls/43/index.m3u8": 0,
   "https://live.264788.xyz/channel/shaanxiweishi?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=dcafcf65d544d8a7b606c454d3f8ef47": 0,
@@ -11277,5 +11277,9 @@
   "http://183.10.180.152:212/tsfile/live/1032_1.m3u8": 0,
   "http://101.66.198.11:9901/tsfile/live/0131_1.m3u8?authid=0%24LR%E2%80%A212%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF5%E3%80%8F&key=txiptv&playlive=0": 0,
   "http://1.69.114.36:9901/tsfile/live/0131_1.m3u8?authid=0&key=txiptv&playlive=1": 0,
-  "http://101.66.198.11:9901/tsfile/live/0131_1.m3u8?authid=0&key=txiptv&playlive=0": 0
+  "http://101.66.198.11:9901/tsfile/live/0131_1.m3u8?authid=0&key=txiptv&playlive=0": 0,
+  "https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4k_mbd.m3u8?auth_key=1778367600-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-cafb09d1fa2cbf0b1cfbb0b26d15b040&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c": 0,
+  "http://198.204.240.250:82/live/cctv8k.m3u8": 0,
+  "http://125.42.150.148:9901/tsfile/live/0122_1.m3u8?authid=0%24LR%E2%80%A211%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF1%E3%80%8F&key=txiptv&playlive=1": 0,
+  "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=55a762fba059cf50fd123acfb4b14764&wsTime=1778342402": 0
 }
