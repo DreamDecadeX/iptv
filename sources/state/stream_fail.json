@@ -3431,7 +3431,7 @@
   "https://t.freetv.fun/live/shan-xi-wei-shi-3-2.m3u8": 0,
   "http://222.169.85.8:9901/tsfile/live/0118_1.m3u8": 0,
   "http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226704/1.m3u8": 2,
-  "http://120.76.248.139/live/bfgd/4200000109.m3u8": 2,
+  "http://120.76.248.139/live/bfgd/4200000109.m3u8": 0,
   "http://120.224.178.16:9901/tsfile/live/0142_1.m3u8?authid=0&key=txiptv&playlive=1": 2,
   "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?Contentid=1000000001000028357&channel-id=FifastbLive&livemode=1&mode=1&stbId=yu": 2,
   "https://live.264788.xyz/channel/guangdongweishi?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=d66348b222c74382e7cec90352efc43b": 0,
@@ -4026,7 +4026,7 @@
   "http://tvbox6.icu/tv/migu.php?id=hnws%24LR%E2%80%A218%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF2%E3%80%8F": 1,
   "http://125.125.134.234:9901/tsfile/live/0139_1.m3u8?authid=0%24LR%E2%80%A218%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF6%E3%80%8F&key=txiptv&playlive=1": 1,
   "http://nn.7x9d.cn/xzc2.php?hls=aHR0cDovLzIyMi44NS4xOTguOTI6ODAwMC9obHMvMjcvaW5kZXgubTN1OA%3D%3D&ua=TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgNi4xOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTA2LjAuMC4wIFNhZmFyaS81MzcuMzY%3D": 2,
-  "http://120.76.248.139/live/bfgd/4200000339.m3u8": 2,
+  "http://120.76.248.139/live/bfgd/4200000339.m3u8": 0,
   "http://cdn6.bkpcp.top/tl/tuiliu.php?id=hnws": 0,
   "https://live.264788.xyz/channel/henanweishi?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=dbf52e1b61eb6d2cc03d3c6ccf8153a8": 2,
   "http://111.160.17.2:59901/tsfile/live/0001_47.m3u8?authid=0&key=txiptv&playlive=1": 2,
@@ -11317,5 +11317,7 @@
   "http://1.69.114.36:9901/tsfile/live/0142_1.m3u8?authid=0&key=txiptv&playlive=1": 0,
   "http://183.10.180.152:212/tsfile/live/1020_1.m3u8": 0,
   "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=16b914ca20109f4578a53a8a6cfe5c7c&wsTime=1778421576": 0,
-  "http://119.39.9.8:9901/tsfile/live/0118_1.m3u8?authid=0&key=txiptv&playlive=0": 0
+  "http://119.39.9.8:9901/tsfile/live/0118_1.m3u8?authid=0&key=txiptv&playlive=0": 0,
+  "https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4_mbd.m3u8?auth_key=1778468400-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-690bdd585838e0ba1b7605e71d38911e&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c": 0,
+  "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=9b200964c98b7330cf1ede5136053052&wsTime=1778428791": 0
 }
