@@ -11303,5 +11303,9 @@
   "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=294f2a83c668a79f10bfe9e47822b11d&wsTime=1778392670": 0,
   "http://219.135.176.78:85/tsfile/live/662/2047_1.m3u8?key=txiptv": 0,
   "https://live.264788.xyz/channel/chcjiatingyingyuan?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=793fab686a474d798d627cd73c70d613": 0,
-  "https://live.264788.xyz/channel/chcdongzuodianying?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=93acb2d859f1483a3fe6f3a46516506f": 0
+  "https://live.264788.xyz/channel/chcdongzuodianying?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=93acb2d859f1483a3fe6f3a46516506f": 0,
+  "http://fm1077.serv00.net/Smart.php?id=cctv1%24LR%E2%80%A211%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF11%E3%80%8F": 0,
+  "https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4k_mbd.m3u8?auth_key=1778446800-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-63c773a46c5d3ff396e600e6ca41c486&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c": 0,
+  "http://fm1077.serv00.net/Smart.php?id=cctv8hd%24LR%E2%80%A213%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF13%E3%80%8F": 0,
+  "http://222.169.85.8:9901/tsfile/live/0125_1.m3u8?authid=0%24LR%E2%80%A218%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF4%E3%80%8F&key=txiptv&playlive=1": 0
 }
