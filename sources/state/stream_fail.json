@@ -2228,7 +2228,7 @@
   "http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv11hd": 0,
   "http://111.61.236.247:9081/hls/11/index.m3u8": 0,
   "http://121.19.134.139:808/tsfile/live/0011_1.m3u8?authid=0&key=txiptv&playlive=1": 2,
-  "http://175.154.151.98:808/hls/12/index.m3u8": 2,
+  "http://175.154.151.98:808/hls/12/index.m3u8": 0,
   "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?Contentid=5000000011000031107&channel-id=bestzb&livemode=1&mode=1&stbId=yu": 2,
   "http://112.92.129.96:9898/hls/30/index.m3u8": 0,
   "http://112.27.235.94:8000/hls/13/index.m3u8": 0,
