@@ -2215,7 +2215,7 @@
   "https://live.264788.xyz/channel/cctv11?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=1cbd4046d7da2c3256da8f134bb57155": 0,
   "http://119.29.233.26:1234/667987558": 2,
   "http://[2409:8087:1a0a:df::404b]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225597/index.m3u8": 2,
-  "http://183.223.157.33:9901/tsfile/live/0011_1.m3u8?authid=0&key=txiptv&playlive=1": 2,
+  "http://183.223.157.33:9901/tsfile/live/0011_1.m3u8?authid=0&key=txiptv&playlive=1": 0,
   "http://198.204.228.26/live/cctv11hd.m3u8": 0,
   "http://112.27.235.94:8000/hls/12/index.m3u8": 0,
   "http://rihou.cc:555/tv/CCTV11é…’åº—": 2,
@@ -2300,7 +2300,7 @@
   "https://live.264788.xyz/channel/cctv12?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=577823de18178c8e78f5dc92bfa605c3": 2,
   "http://[2409:8087:3c02:0021:0000:0001:0000:100a]:6410/shandong_cabletv.live.zte.com////CHANNEL00000322/index.m3u8": 2,
   "http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226723/1.m3u8": 2,
-  "http://183.223.157.33:9901/tsfile/live/0012_1.m3u8?authid=0&key=txiptv&playlive=1": 2,
+  "http://183.223.157.33:9901/tsfile/live/0012_1.m3u8?authid=0&key=txiptv&playlive=1": 0,
   "https://live.264788.xyz/channel/cctv12?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=7274a33e11b479af1bb9e15efd258e4b": 2,
   "http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/20200324/cctv12hd/51/01.m3u8?Channel_ID=0116_2600031500-99000-200300140100004&HlsProfileId=1&HlsSubType=1&ParentNodeID=-99&ProgramID=673168185&SecurityKey=20260424111242&appCode=miguvideo_android&assertID=5501083627&bean=mgspad&client_ip=116.162.207.21&conFee=0&ct=android&encrypt=17aee346b7b4b25b25478306d8ef641a&is_advertise=0&jid=4f89b0f1d885527a227fd4a636419cfe1777000358497V&mcid=500020&msisdn=4f89b0f1d885527a227fd4a636419cfe&mtv_session=fdebc40bfbdddfe44e3bc4524747581d&mvid=5102910389&netType=4&nphaid=0&pid=2028597139&playUrlSsn=4f89b0f1d885527a227fd4a636419cfe1777000359411&playurlVersion=ZQ-A1-9.3.2-RELEASE&prlId=4f89b0f1d885527a227fd4a636419cfe1777000359418&sid=5501083627&sjid=subsession_1777000457002&spid=699004&sv=10004&tid=android&timestamp=20260424111242&videocodec=h264": 1,
   "https://play.kankanlive.com/live/1698423511884917.m3u8": 2,
@@ -11450,5 +11450,7 @@
   "http://bztv.tvbus.cc:8081/cdnlive/ynws.m3u8": 0,
   "http://bztv.tvbus.cc:8081/cdnlive/gzws.m3u8": 0,
   "http://bztv.tvbus.cc:8081/cdnlive/qhws.m3u8": 0,
-  "http://bztv.tvbus.cc:8081/cdnlive/nxws.m3u8": 0
+  "http://bztv.tvbus.cc:8081/cdnlive/nxws.m3u8": 0,
+  "http://www.kaniptv.cn/xz/xz_960a1fe828/湖南广电.php?id=5559": 0,
+  "http://www.kaniptv.cn/xz/xz_960a1fe828/湖南广电.php?id=5181": 0
 }
