@@ -756,7 +756,7 @@
   "http://120.87.19.109:80/PLTV/88888973/224/3221225768/10000100000000060000000000337107_0.smil/01.m3u8?accountinfo=UoQbCSdhOfs+Fhzpjb+WON1faRQ9pU15SBx6EULzJM%2Fq63EjPL5%2FUXSVfEKzDq3x89LkMQWQANc0MwdJOKzoZQWZ1F4+6A1eDkDeh5XZlpvpn23wIF+ldb6dnBPa8zHj%2CEND&fmt=ts2hls%2C244%2C01.m3u8&tenantId=8601": 2,
   "http://gslbserv.itv.cmvideo.cn:80/reallive-cctv1/1.m3u8?Contentid=reallive-cctv1&channel-id=ystenlive&livemode=1&mode=1&stbId=toShengfen": 2,
   "https://live.264788.xyz/channel/cctv1?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=40cf2f40582b104fb087535f9601ea19": 0,
-  "http://112.46.85.60:8009/hls/501/index.m3u8": 2,
+  "http://112.46.85.60:8009/hls/501/index.m3u8": 0,
   "http://74.91.26.218:82/live/cctv1hd.m3u8": 0,
   "http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/cctv1hd265/51/20191230/01.m3u8?Channel_ID=0116_2600031500-99000-200300140100004&HlsProfileId=1&HlsSubType=1&ParentNodeID=-99&ProgramID=608807420&SecurityKey=20260424114927&appCode=miguvideo_android&assertID=2201057821&bean=mgspad&client_ip=111.172.250.83&conFee=0&ct=android&encrypt=d1e5350414a349ec5d27dcab9e2f27f7&is_advertise=0&jid=4f89b0f1d885527a227fd4a636419cfe1777002563945V&mcid=500020&msisdn=4f89b0f1d885527a227fd4a636419cfe&mtv_session=8e495c8947a6438547d0b7c5efd73667&mvid=2201057821&netType=4&nphaid=0&pid=2028597139&playUrlSsn=4f89b0f1d885527a227fd4a636419cfe1777002564539&playurlVersion=ZQ-A1-9.3.2-RELEASE&prlId=4f89b0f1d885527a227fd4a636419cfe1777002564550&sid=2201057821&sjid=subsession_1777002597996&spid=699004&sv=10004&tid=android&timestamp=20260424114927&videocodec=h265": 1,
   "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?Contentid=1000000001000018602&channel-id=ystenlive&livemode=1&mode=1&stbId=yu": 2,
@@ -11400,5 +11400,13 @@
   "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=84575cf83912cdd9a30e887a758bb24b&wsTime=1778644794": 0,
   "https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4_mbd.m3u8?auth_key=1778691600-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-948a52cdea2b0c0724dd13d3c32f600e&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c": 0,
   "https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4k_mbd.m3u8?auth_key=1778691600-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-adf81d9f9dcf86269790db1fae411b63&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c": 0,
-  "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=e09809da0dd61371af37cf38b9b47952&wsTime=1778652049": 0
+  "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=e09809da0dd61371af37cf38b9b47952&wsTime=1778652049": 0,
+  "https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4k_mbd.m3u8?auth_key=1778720400-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-bd5802fbfe1bc22730ddc61150f1437d&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c": 0,
+  "http://www.kaniptv.cn/xz/xz_960a1fe828/湖南广电.php?id=5125": 0,
+  "https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4_mbd.m3u8?auth_key=1778720400-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-fd3177a09980be36c8321a5e7c3de3ab&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c": 0,
+  "http://www.kaniptv.cn/xz/xz_960a1fe828/湖南广电.php?id=5132": 0,
+  "http://www.kaniptv.cn/xz/xz_960a1fe828/湖南广电.php?id=5524": 0,
+  "http://183.223.157.33:9901/tsfile/live/0013_1.m3u8?authid=0%24LR%E2%80%A214%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF7%E3%80%8F&key=txiptv&playlive=1": 0,
+  "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=c8a2616c3ba4637e840016f90ab64c5c&wsTime=1778680753": 0,
+  "http://113.96.132.21/tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsBindIP=2&wsIPSercert=f1ed5e80c31ab65580d88c6bbb451005&wsSecret=80a802895abc54849cba0960a26b8a53&wsSession=176c4a7574da17521cff758e-177866681440840&wsTime=1778678066&wsserid=1168295652905245675": 0
 }
