@@ -693,7 +693,7 @@
   "https://live.264788.xyz/channel/cctv1?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=b3819637a4c479c8ccd4d25e42eb96ca": 2,
   "http://183.214.23.16:2380/hw1live.rxip.sc96655.com.huan.tv/live/CCTV-1H265_4000.m3u8": 2,
   "http://tvbox6.icu/tv/migu.php?id=cctv1%24LR%E2%80%A215%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF1%E3%80%8F": 1,
-  "http://iptv.4666888.xyz/iptv2A.php?id=7": 2,
+  "http://iptv.4666888.xyz/iptv2A.php?id=7": 0,
   "http://www.kaniptv.cn/mk.php?id=cctv1&ip=node-111-20-163-124.speedtest.cn%3A8001": 2,
   "http://ott.mobaibox.com/PLTV/4/224/3221227543/index.m3u8?socks5=45.78.62.148%3A3356": 2,
   "https://live.264788.xyz/channel/cctv1?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=458e34213492c68772e565c06868d4af": 2,
@@ -11554,5 +11554,11 @@
   "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=9addc321c9bac4d9669d3503a538b058&wsTime=1778767149": 0,
   "http://bztv.tvbus.cc:8081/cdnlive/gsws.m3u8": 0,
   "https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4_mbd.m3u8?auth_key=1778806800-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-c96bc6fdd7e30e2c6eddc863a6808d5d&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c": 0,
-  "https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4k_mbd.m3u8?auth_key=1778806800-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-15d7595610a4aaa1f57d1091ca514392&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c": 0
+  "https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4k_mbd.m3u8?auth_key=1778806800-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-15d7595610a4aaa1f57d1091ca514392&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c": 0,
+  "http://207.56.13.146:81/cdnlive/cctv2.m3u8": 0,
+  "http://207.56.13.146:81/cdnlive/cctv5p.m3u8": 0,
+  "http://207.56.13.146:81/cdnlive/cctv7.m3u8": 0,
+  "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=84a3d385e5995c8476842a4d5d275ba6&wsTime=1778774370": 0,
+  "http://207.56.13.146:81/cdnlive/gzws.m3u8": 0,
+  "http://207.56.13.146:81/cdnlive/gsws.m3u8": 0
 }
