@@ -3393,7 +3393,7 @@
   "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?Contentid=5000000006000040023&channel-id=FifastbLive&livemode=1&mode=1&stbId=yu": 2,
   "https://live.264788.xyz/channel/shanxiweishi?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=8e0686e725376b7a0d2079c0e2beb3dd": 2,
   "https://live.264788.xyz/channel/shanxiweishi?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=eeb7d60ca6e0db131ea7a092a3cd28d2": 0,
-  "https://live.264788.xyz/channel/shanxiweishi?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=8b37a515ed8ef12821ad07167563e5e1": 2,
+  "https://live.264788.xyz/channel/shanxiweishi?livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk&streamid=8b37a515ed8ef12821ad07167563e5e1": 0,
   "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221227016/1.m3u8?GuardEncType=2&accountinfo=~~V2.0~Sb5Qr3NTpE2ZugIroKoyTw~tP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND": 2,
   "http://23.237.228.134/live8/shanxi.m3u8": 2,
   "https://iptv.catvod.com/live.php?id=%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86": 2,
@@ -11663,5 +11663,6 @@
   "http://125.43.249.130:9901/tsfile/live/1005_1.m3u8?authid=0&key=txiptv&playlive=1": 0,
   "https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4k_mbd.m3u8?auth_key=1778893200-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-f6f20290ccbb1cf04fc288628a9aeb90&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c": 0,
   "http://xsmt.ccwu.cc/xsmt/smt.php?id=1631": 0,
-  "http://183.10.180.133:212/tsfile/live/1130_1.m3u8": 0
+  "http://183.10.180.133:212/tsfile/live/1130_1.m3u8": 0,
+  "https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4k_mbd.m3u8?auth_key=1778904000-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-d70588bd7b2faea8b84396925a2b40ae&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c": 0
 }
