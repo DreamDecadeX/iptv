@@ -11644,5 +11644,13 @@
   "http://1.69.114.76:9901/tsfile/live/0139_1.m3u8?authid=0&key=txiptv&playlive=1": 0,
   "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=114c6842e0d7a0f89349dbfed35bef7c&wsTime=1778824839": 0,
   "http://1.197.249.239:9901/tsfile/live/0117_1.m3u8?authid=0%24LR%E2%80%A212%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF2%E3%80%8F&key=txiptv&playlive=1": 0,
-  "http://1.69.114.76:9901/tsfile/live/0117_1.m3u8?authid=0&key=txiptv&playlive=1": 0
+  "http://1.69.114.76:9901/tsfile/live/0117_1.m3u8?authid=0&key=txiptv&playlive=1": 0,
+  "http://nas.whuu.store:8003/rtsp/123.147.112.17:8089/04000001/01000000004000000000000000000305": 0,
+  "http://125.42.151.216:9901/tsfile/live/1005_1.m3u8?authid=0&key=txiptv&playlive=1": 0,
+  "http://125.42.151.216:9901/tsfile/live/1012_1.m3u8?authid=0&key=txiptv&playlive=1": 0,
+  "http://125.42.151.216:9901/tsfile/live/0118_1.m3u8?authid=0&key=txiptv&playlive=1": 0,
+  "http://101.66.199.121:9901/tsfile/live/0142_1.m3u8?authid=0&key=txiptv&playlive=0": 0,
+  "http://101.66.199.121:9901/tsfile/live/0143_1.m3u8?authid=0&key=txiptv&playlive=0": 0,
+  "http://101.66.199.215:9901/tsfile/live/0121_1.m3u8?authid=0&key=txiptv&playlive=0": 0,
+  "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=1cc636ae2224278d094128d8a12bfb52&wsTime=1778832069": 0
 }
