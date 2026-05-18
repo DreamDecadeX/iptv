@@ -11830,5 +11830,13 @@
   "http://59.39.89.130:60901/tsfile/live/0006_1.m3u8?authid=0&key=txiptv&playlive=1": 0,
   "https://php.jdshipin.com:2096/TVOD/iptv.php?id=cctv8": 0,
   "http://59.39.89.130:60901/tsfile/live/0013_1.m3u8?authid=0&key=txiptv&playlive=1": 0,
-  "https://php.jdshipin.com:2096/TVOD/iptv.php?id=cctv13": 0
+  "https://php.jdshipin.com:2096/TVOD/iptv.php?id=cctv13": 0,
+  "http://5kuiwan.cn:8888/rtsp/10.254.199.130/PLTV/88888888/224/3221225631/10000100000000060000000000009763_0.smil": 0,
+  "http://59.39.89.130:60901/tsfile/live/0125_11.m3u8?authid=0&key=txiptv&playlive=1": 0,
+  "http://docker.digital8.top/html/V4YD.php?access_token=DY0123_SPV4_471051813_V5reC&id=wssichuan": 0,
+  "http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=3708959b2c73ce65ac4a0020a0f5c38e&wsTime=1779127202": 0,
+  "http://59.39.89.130:60901/tsfile/live/0125_18.m3u8?authid=0%24LR%E2%80%A211%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF5%E3%80%8F&key=txiptv&playlive=1": 0,
+  "https://php.jdshipin.com:2096/TVOD/iptv.php?id=cctv2": 0,
+  "https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4_mbd.m3u8?auth_key=1779166800-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-bfe8d5547214df4193470941b6cdc9ac&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c": 0,
+  "https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4k_mbd.m3u8?auth_key=1779166800-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-b81e850e65a38c2ff0c6cdceda1368f8&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c": 0
 }
