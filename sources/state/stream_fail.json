@@ -11886,5 +11886,22 @@
   "http://59.110.175.70:10000/624878405": 0,
   "http://59.110.175.70:10000/667987558": 0,
   "https://php.jdshipin.com:2096/TVOD/iptv.php?id=cctv11": 0,
-  "http://101.66.194.206:9901/tsfile/live/0013_1.m3u8?authid=0%24LR%E2%80%A216%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF5%E3%80%8F&key=txiptv&playlive=0": 0
+  "http://101.66.194.206:9901/tsfile/live/0013_1.m3u8?authid=0%24LR%E2%80%A216%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF5%E3%80%8F&key=txiptv&playlive=0": 0,
+  "http://1.94.31.214/php/ysp.php?id=hnws": 0,
+  "https://iptv.catvod.com/live.php?id=%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86&line=2%24LR%E2%80%A216%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF13%E3%80%8F": 0,
+  "http://1.94.31.214/php/ysp.php?id=gdws": 0,
+  "http://1.94.31.214/php/ysp.php?id=sdws": 0,
+  "http://1.94.31.214/php/ysp.php?id=jxws": 0,
+  "http://1.94.31.214/php/ysp.php?id=cqws": 0,
+  "http://59.39.89.130:60901/tsfile/live/0125_13.m3u8?authid=0%24LR%E2%80%A214%E2%80%A2IPV4%E3%80%8E%E7%BA%BF%E8%B7%AF8%E3%80%8F&key=txiptv&playlive=1": 0,
+  "http://1.94.31.214/php/ysp.php?id=nxws": 0,
+  "http://1.94.31.214/php/ysp.php?id=cctv2": 0,
+  "https://php.jdshipin.com:2096/TVOD/iptv.php?id=cctv3": 0,
+  "https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4k_mbd.m3u8?auth_key=1779253200-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-50a2e954da176a55e0e748ccc9997a46&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c": 0,
+  "https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4_mbd.m3u8?auth_key=1779253200-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-8a6abfc8175ab5190aeeee6277bc8c24&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c": 0,
+  "http://1.94.31.214/php/ysp.php?id=cctv5": 0,
+  "http://1.94.31.214/php/ysp.php?id=cctv6": 0,
+  "http://1.94.31.214/php/ysp.php?id=cctv8k": 0,
+  "http://1.94.31.214/php/ysp.php?id=cctv9": 0,
+  "http://1.94.31.214/php/ysp.php?id=cctv13": 0
 }
