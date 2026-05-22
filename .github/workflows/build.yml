@@ -5,7 +5,7 @@ env:
 
 on:
   schedule:
-    - cron: "0 */12 * * *"   # 每 12 小时兜底跑一次
+    - cron: "0 2 * * *"   # 每天凌晨2点跑一次
   push:
     paths:
       - "sources/local_spider.m3u"   # 只有 spider 源变化才触发
