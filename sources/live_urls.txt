@@ -8,7 +8,6 @@ https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv
 https://live.zbds.top/tv/iptv4.txt$直播电视IPV4
 https://d.kstore.dev/download/12441/ds9.txt$电视接口
 https://orange-band-8374.lovereallyworld.workers.dev$cf接口
-https://iptv-org.github.io/iptv/index.m3u$iptv-org
 https://t.freetv.fun/m3u/playlist.m3u$freetv.fun
 https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u$vbskycn-iptv4
 https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.m3u$vbskycn-iptv6
