@@ -15,7 +15,7 @@ on:
         description: "请选择频道排序方式"
         required: true
         type: choice
-        default: "本地源 → 高质量"
+        default: "高质量 → 本地源"
         options:
           - 本地源 → 高质量
           - 高质量 → 本地源
