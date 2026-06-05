@@ -66,7 +66,7 @@ jobs:
             sources/state/cache.json
 
   # ============================
-  # 合并 Job（唯一提交点）
+  # 合并 Job
   # ============================
   merge:
     runs-on: ubuntu-latest
@@ -97,7 +97,7 @@ jobs:
 
 
       # ============================
-      # 合并 cache.json（关键步骤）
+      # 合并 cache.json
       # ============================
       - name: Merge cache.json
         run: |
@@ -122,34 +122,71 @@ jobs:
             echo
           done
 
+          # ============================
+          # 合并 TXT（固定顺序）
+          # ============================
           echo "=== 合并 TXT ==="
-          touch output/channels_all.txt
+          > output/channels_all.txt
 
-          txt_files=( $(find merged -name "channels_*.txt") )
+          txt_count=0
 
-          if [ ${#txt_files[@]} -eq 0 ]; then
-            echo "⚠️ 没有任何 TXT 文件可合并" >> output/channels_all.txt
-          else
-            for f in "${txt_files[@]}"; do
+          for pattern in \
+            "channels_cctv.txt" \
+            "channels_satellite.txt"
+          do
+            while IFS= read -r f; do
+              [ -f "$f" ] || continue
+
+              txt_count=$((txt_count + 1))
+
               echo "合并：$f"
+
               cat "$f" >> output/channels_all.txt
               echo "" >> output/channels_all.txt
-            done
+
+            done < <(find merged -name "$pattern" | sort)
+          done
+
+          if [ "$txt_count" -eq 0 ]; then
+            echo "⚠️ 没有任何 TXT 文件可合并" > output/channels_all.txt
           fi
 
+          # ============================
+          # 合并 M3U（固定顺序）
+          # ============================
           echo "=== 合并 M3U ==="
+
           echo "#EXTM3U" > output/channels_all.m3u
 
-          m3u_files=( $(find merged -name "channels_*.m3u") )
+          m3u_count=0
 
-          if [ ${#m3u_files[@]} -eq 0 ]; then
-            echo "⚠️ 没有任何 M3U 文件可合并"
-          else
-            for f in "${m3u_files[@]}"; do
+          for pattern in \
+            "channels_cctv.m3u" \
+            "channels_satellite.m3u"
+          do
+            while IFS= read -r f; do
+              [ -f "$f" ] || continue
+
+              m3u_count=$((m3u_count + 1))
+
               echo "合并：$f"
-              grep -a -h -v "#EXTM3U" "$f" >> output/channels_all.m3u || true
-            done
+
+              grep -a -h -v "^#EXTM3U$" "$f" \
+                >> output/channels_all.m3u || true
+
+            done < <(find merged -name "$pattern" | sort)
+          done
+
+          if [ "$m3u_count" -eq 0 ]; then
+            echo "⚠️ 没有任何 M3U 文件可合并"
           fi
+
+          echo
+          echo "=== 合并完成 ==="
+          echo "TXT文件数量: $txt_count"
+          echo "M3U文件数量: $m3u_count"
+
+          ls -lh output/
 
       # ============================
       # 统一判断（stream_fail / upstream_blocklist / live_urls / README）
