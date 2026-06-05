@@ -47,3 +47,4 @@ https://gongdian.top/tv/ku9/webview.txt#JS=https://gongdian.top/tv/ku9/js/webvie
 https://pan.vma.cc/pan/down.php/350735607a786faaaa69aa5bbe3a3078.txt$Web2接口
 https://raw.githubusercontent.com/imDazui/Tvlist-awesome-m3u-m3u8/master/m3u/%E7%A7%BB%E5%8A%A8ipv6.m3u$Tvlist-awesome-m3u-m3u8
 https://raw.githubusercontent.com/zilong7728/Collect-IPTV/refs/heads/main/best_sorted.m3u$zilong7728/Collect-IPTV
+https://taoiptv.com/lives/51025.txt?token=e436e546682bffd5$四川移动组播源
