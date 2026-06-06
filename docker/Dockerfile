@@ -30,7 +30,7 @@ COPY . /workspace
 ENV SOURCE_DESC="高质量 → 本地源"
 
 # 复制入口脚本并赋予执行权限
-COPY entrypoint.sh /entrypoint.sh
+COPY docker/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
