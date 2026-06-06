@@ -1,15 +1,13 @@
-version: "3.9"
-
 services:
   iptv:
     build: .
-    image: iptv-builder:latest
+    image: yexundao/iptv:latest
+    container_name: iptv
+    restart: always
     volumes:
       - ./sources:/workspace/sources
       - ./output:/workspace/output
-    working_dir: /workspace
-    environment:
-      PYTHONUNBUFFERED: "1"
     ports:
-      - "8080:8080"
-    command: bash -lc "python3 scripts/build_job.py cctv '高质量 → 本地源' && python3 scripts/build_job.py satellite '高质量 → 本地源' && python3 scripts/merge_cache.py && python3 scripts/merge_state_files.py && python3 -m http.server 8080 --directory output"
+      - "15123:15123"
+    environment:
+      SOURCE_DESC: "高质量 → 本地源"
