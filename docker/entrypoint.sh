@@ -34,14 +34,14 @@ generate() {
     echo "========================================"
 }
 
-# 启动时先执行一次
-generate
-
 # 启动 HTTP 服务
 python3 -m http.server 15123 --directory output &
 HTTP_PID=$!
 
 echo "HTTP Server PID: $HTTP_PID"
+
+# 启动时先执行一次
+generate
 
 # 后台定时更新
 while true
