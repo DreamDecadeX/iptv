@@ -3,33 +3,52 @@ set -e
 
 export TZ=${TZ:-Asia/Shanghai}
 
-echo "Container timezone: $(date)"
+# 默认6小时
+UPDATE_INTERVAL_HOURS=${UPDATE_INTERVAL_HOURS:-6}
 
-# 设置定时任务
-if [ -n "$CRON_SCHEDULE" ]; then
-    echo "Setting up cron schedule: $CRON_SCHEDULE"
+# 转换成秒
+UPDATE_INTERVAL_SECONDS=$((UPDATE_INTERVAL_HOURS * 3600))
 
-    cat <<EOF >/etc/cron.d/restart-job
-$CRON_SCHEDULE root pkill -f "python3 -m http.server"
-EOF
+echo "========================================"
+echo "Container started: $(date)"
+echo "Update interval: ${UPDATE_INTERVAL_HOURS} hours"
+echo "========================================"
 
-    chmod 0644 /etc/cron.d/restart-job
+cd /workspace
 
-    service cron start
+generate() {
+    echo "========================================"
+    echo "开始更新 IPTV 数据: $(date)"
+    echo "========================================"
 
-    echo "Cron daemon started."
-fi
+    python3 scripts/build_job.py cctv "${SOURCE_DESC}"
 
-echo "开始生成 IPTV 数据..."
+    python3 scripts/build_job.py satellite "${SOURCE_DESC}"
 
-python3 scripts/build_job.py cctv "${SOURCE_DESC}"
+    python3 scripts/merge_cache.py
 
-python3 scripts/build_job.py satellite "${SOURCE_DESC}"
+    python3 scripts/merge_state_files.py
 
-python3 scripts/merge_cache.py
+    echo "========================================"
+    echo "更新完成: $(date)"
+    echo "========================================"
+}
 
-python3 scripts/merge_state_files.py
+# 启动时先执行一次
+generate
 
-echo "启动 HTTP 服务..."
+# 启动 HTTP 服务
+python3 -m http.server 15123 --directory output &
+HTTP_PID=$!
 
-exec python3 -m http.server 15123 --directory output
+echo "HTTP Server PID: $HTTP_PID"
+
+# 后台定时更新
+while true
+do
+    sleep "${UPDATE_INTERVAL_SECONDS}"
+    generate
+done &
+
+# 等待 HTTP 服务退出
+wait $HTTP_PID

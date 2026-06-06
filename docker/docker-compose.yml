@@ -10,4 +10,4 @@ services:
       - "15123:15123"
     environment:
       SOURCE_DESC: "高质量 → 本地源"
-      CRON_SCHEDULE: "0 */6 * * *"            # 每6小时重启一次
+      UPDATE_INTERVAL_HOURS: 6
