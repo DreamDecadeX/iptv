@@ -125,12 +125,6 @@ def is_static_stream(url, timeout=8, frames=5, interval=1.0, threshold=20):
     :return: True 表示静态画面
     """
     try:
-        import cv2
-        import numpy as np
-        import tempfile
-        import time
-        import subprocess
-
         # 临时文件列表
         tmp_files = []
         for i in range(frames):
