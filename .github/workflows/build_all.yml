@@ -1,4 +1,4 @@
-name: IPTV Build All
+name: Build IPTV All
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
