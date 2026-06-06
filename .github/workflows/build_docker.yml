@@ -23,10 +23,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build Docker image
-        run: |
-          docker build -t iptv-builder:${{ github.event.inputs.image_tag }} .
-
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v4
 
