@@ -1,6 +1,5 @@
 services:
   iptv:
-    build: .
     image: yexundao/iptv:latest
     container_name: iptv
     restart: always

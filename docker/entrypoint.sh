@@ -1,20 +1,35 @@
 #!/bin/bash
 set -e
 
-# 确保时区为中国时区（如果环境变量 TZ 未设置，默认已通过 ENV 设置）
 export TZ=${TZ:-Asia/Shanghai}
+
 echo "Container timezone: $(date)"
 
-# 如果用户提供了 CRON_SCHEDULE 环境变量，则设置定时任务
+# 设置定时任务
 if [ -n "$CRON_SCHEDULE" ]; then
     echo "Setting up cron schedule: $CRON_SCHEDULE"
-    # 写入 crontab：在指定时间执行 pkill -f "python3 -m http.server"
-    # 这会导致 HTTP 服务器终止，进而容器主进程退出，Docker 自动重启容器
-    (crontab -l 2>/dev/null || echo "") | { cat; echo "$CRON_SCHEDULE root pkill -f 'python3 -m http.server' > /proc/1/fd/1 2>&1"; } | crontab -
-    # 启动 cron 服务（后台运行）
+
+    cat <<EOF >/etc/cron.d/restart-job
+$CRON_SCHEDULE root pkill -f "python3 -m http.server"
+EOF
+
+    chmod 0644 /etc/cron.d/restart-job
+
     service cron start
+
     echo "Cron daemon started."
 fi
 
-# 执行传递给 CMD 的命令（即原始的一大串构建 + 启动服务器）
-exec "$@"
+echo "开始生成 IPTV 数据..."
+
+python3 scripts/build_job.py cctv "${SOURCE_DESC}"
+
+python3 scripts/build_job.py satellite "${SOURCE_DESC}"
+
+python3 scripts/merge_cache.py
+
+python3 scripts/merge_state_files.py
+
+echo "启动 HTTP 服务..."
+
+exec python3 -m http.server 15123 --directory output
