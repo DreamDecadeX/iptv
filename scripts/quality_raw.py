@@ -243,6 +243,20 @@ def is_static_stream(url, timeout=8, frames=5, interval=1.0, threshold=20):
         return False
 
 # ============================
+# 正态分布观感映射：raw_score → 0~100
+# ============================
+
+def map_to_0_100(raw_score):
+    """
+    使用 tanh 映射，0 分对应 50 分
+    """
+    if raw_score <= -100:
+        return 0.0
+    x = raw_score / 25.0          # 调整敏感度，使 raw_score 在 -25~25 区间显著变化
+    y = math.tanh(x)
+    return (y + 1) * 50
+
+# ============================
 # 质量检测（核心）
 # ============================
 
@@ -274,13 +288,12 @@ def quality_score(url, source="unknown"):
         or (h <= 0)
     )
 
-    # IPTV静态检测误判严重，默认关闭
-    # if not failed:
-    #     try:
-    #         if is_static_stream(url):
-    #             failed = True
-    #     except:
-    #         pass
+    if not failed:
+        try:
+            if is_static_stream(url):
+                failed = True
+        except:
+            pass
 
     if failed:
         raw_score = 0
@@ -328,10 +341,7 @@ def quality_score(url, source="unknown"):
             - delay_penalty
         )
 
-        final_score = max(
-            0,
-            min(raw_score, 100)
-        )
+        final_score = map_to_0_100(raw_score)
 
     with cache_lock:
         cache[url] = {
