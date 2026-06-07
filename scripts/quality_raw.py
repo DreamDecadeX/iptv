@@ -246,15 +246,21 @@ def is_static_stream(url, timeout=8, frames=5, interval=1.0, threshold=20):
 # 正态分布观感映射：raw_score → 0~100
 # ============================
 
-def map_to_0_100(raw_score):
+import math
+
+def map_to_0_100_gauss(raw_score, mean=50, std=15):
     """
-    使用 tanh 映射，0 分对应 50 分
+    将 raw_score 映射到 0~100 分
+    使用正态分布映射，mean = 中心值，std = 标准差
     """
-    if raw_score <= -100:
-        return 0.0
-    x = raw_score / 25.0          # 调整敏感度，使 raw_score 在 -25~25 区间显著变化
-    y = math.tanh(x)
-    return (y + 1) * 50
+    x = max(min(raw_score, 100), 0)
+
+    # 高斯映射
+    y = math.exp(-0.5 * ((x - mean) / std) ** 2)
+
+    # 放大到 0~100
+    score = y * 100
+    return score
 
 # ============================
 # 质量检测（核心）
@@ -341,7 +347,7 @@ def quality_score(url, source="unknown"):
             - delay_penalty
         )
 
-        final_score = map_to_0_100(raw_score)
+        final_score = map_to_0_100_gauss(raw_score)
 
     with cache_lock:
         cache[url] = {
