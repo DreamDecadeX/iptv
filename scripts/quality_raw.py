@@ -319,7 +319,7 @@ def quality_score(url, source="unknown"):
             fps_score = min(fps, 60) / 60 * 20
 
         # 延迟惩罚
-        delay_penalty = min(delay, 4.0) * 1.5
+        delay_penalty = min(delay, 3.0) * 1.5
 
         raw_score = (
             resolution_score

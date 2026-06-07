@@ -396,7 +396,6 @@ def detect_and_sort_urls(name, urls, is_entertainment=False):
             info = cache.get(url, {})
             w = info.get("width", 0)
             h = info.get("height", 0)
-            bitrate = info.get("bitrate", 0)
             delay = info.get("delay", 0)
             blur = info.get("blur", 0)
             err = info.get("error", "")
@@ -404,7 +403,7 @@ def detect_and_sort_urls(name, urls, is_entertainment=False):
             print(
                 f"[{name}] {idx}/{total} "
                 f"{'缓存' if cached else '检测'} → "
-                f"{w}x{h} | {bitrate/1_000_000:.2f}Mbps | 延迟 {delay}s | 清晰度 {blur:.1f} | 得分 {score:.1f}",
+                f"{w}x{h} | 延迟 {delay}s | 清晰度 {blur:.1f} | 得分 {score:.1f}",
                 flush=True
             )
 
@@ -617,7 +616,6 @@ def build_output_m3u(channels, mode, whitelist_order):
                 score = info.get("score", 0)
                 w = info.get("width", 0)
                 h = info.get("height", 0)
-                bitrate = info.get("bitrate", 0)
                 delay = info.get("delay", 0)
                 blur = info.get("blur", 0)
 
@@ -634,7 +632,6 @@ def build_output_m3u(channels, mode, whitelist_order):
                     f'{group_field}'
                     f'score="{score:.1f}" '
                     f'resolution="{res}" '
-                    f'bitrate="{bitrate}" '
                     f'delay="{delay}" '
                     f'blur="{blur:.2f}" '
                     f'best="{best_flag}" '
