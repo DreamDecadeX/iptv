@@ -184,7 +184,7 @@ def get_sorted_urls(name, raw_urls,enable_high,enable_mid,enable_low):
 
     high_remote = [u for u in sorted_remote if score_of(u) > 90]
     mid_remote  = [u for u in sorted_remote if 80 <= score_of(u) <= 90]
-    low_remote  = [u for u in sorted_remote if score_of(u) < 80]
+    low_remote  = [u for u in sorted_remote if 10 <= score_of(u) < 80]
 
     use_high = high_remote if enable_high else []
     use_mid  = mid_remote  if enable_mid  else []
