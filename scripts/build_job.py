@@ -1,17 +1,15 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-import requests
 import re
 import json
-from collections import defaultdict
-from pathlib import Path
-from concurrent.futures import ThreadPoolExecutor, as_completed
 import sys
 import time
 import random
+import requests
 import urllib.parse
+from pathlib import Path
+from collections import defaultdict
 from datetime import datetime, timedelta
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from urllib.parse import urlparse, parse_qsl, urlencode, urlunparse
 
 from quality_raw import (
     quality_score,
@@ -62,19 +60,34 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # 显示文案 → 内部变量
 SORT_MODE_MAP = {
-    "本地源 → 高质量":           "local_high",
-    "高质量 → 本地源":           "high_local",
-    "本地源 → 高质量 → 中质量":   "local_high_mid",
-    "高质量 → 本地源 → 中质量":   "high_local_mid",
-    "高质量 → 中质量 → 本地源":   "high_mid_local",
+    # 本地源优先
+    "本地源 → 高质量":                 "local_high",
+    "本地源 → 高质量 → 中质量":         "local_high_mid",
+    "本地源 → 高质量 → 中质量 → 低质量": "local_high_mid_low",
 
-    "high_local": "high_local",
+    # 高质量优先
+    "高质量":                         "high",
+    "高质量 → 中质量":                 "high_mid",
+    "高质量 → 中质量 → 低质量":         "high_mid_low",
+
+    # 混合模式
+    "高质量 → 本地源":                 "high_local",
+    "高质量 → 本地源 → 中质量":         "high_local_mid",
+    "高质量 → 中质量 → 本地源":         "high_mid_local",
+
+    # 内部值兼容
     "local_high": "local_high",
     "local_high_mid": "local_high_mid",
+    "local_high_mid_low": "local_high_mid_low",
+
+    "high": "high",
+    "high_mid": "high_mid",
+    "high_mid_low": "high_mid_low",
+
+    "high_local": "high_local",
     "high_local_mid": "high_local_mid",
     "high_mid_local": "high_mid_local",
 }
-
 
 # ============================
 # 工具函数
@@ -95,6 +108,94 @@ def is_numeric_channel(name: str) -> bool:
     n = name.strip()
     n = re.sub(r"[台频道]+$", "", n)
     return n.isdigit()
+
+def get_quality_flags():
+    """
+    根据排序模式返回：
+    ENABLE_HIGH, ENABLE_MID, ENABLE_LOW
+    """
+    if SORT_MODE in (
+        "local_high",
+        "high_local",
+        "high"
+    ):
+        return True, False, False
+
+    elif SORT_MODE in (
+        "local_high_mid",
+        "high_local_mid",
+        "high_mid_local",
+        "high_mid"
+    ):
+        return True, True, False
+
+    elif SORT_MODE in (
+        "local_high_mid_low",
+        "high_mid_low"
+    ):
+        return True, True, True
+
+    return True, False, False
+
+def sort_urls_by_mode(local_urls,use_high,use_mid,use_low):
+    """
+    根据 SORT_MODE 排序
+    """
+    if SORT_MODE == "local_high":
+        return local_urls + use_high
+
+    elif SORT_MODE == "high_local":
+        return use_high + local_urls
+
+    elif SORT_MODE == "local_high_mid":
+        return local_urls + use_high + use_mid
+
+    elif SORT_MODE == "high_local_mid":
+        return use_high + local_urls + use_mid
+
+    elif SORT_MODE == "high_mid_local":
+        return use_high + use_mid + local_urls
+
+    elif SORT_MODE == "local_high_mid_low":
+        return local_urls + use_high + use_mid + use_low
+
+    elif SORT_MODE == "high":
+        return use_high
+
+    elif SORT_MODE == "high_mid":
+        return use_high + use_mid
+
+    elif SORT_MODE == "high_mid_low":
+        return use_high + use_mid + use_low
+
+    return local_urls + use_high
+
+def get_sorted_urls(name, raw_urls,enable_high,enable_mid,enable_low):
+    """
+    根据排序模式返回最终 urls
+    """
+    local_urls = [u for u in raw_urls if is_local_source(u)]
+    remote_urls = [u for u in raw_urls if not is_local_source(u)]
+
+    sorted_remote = detect_and_sort_urls(name, remote_urls)
+
+    def score_of(u):
+        return cache.get(normalize_url(u), {}).get("score", 0)
+
+    high_remote = [u for u in sorted_remote if score_of(u) > 90]
+    mid_remote  = [u for u in sorted_remote if 80 <= score_of(u) <= 90]
+    low_remote  = [u for u in sorted_remote if score_of(u) < 80]
+
+    use_high = high_remote if enable_high else []
+    use_mid  = mid_remote  if enable_mid  else []
+    use_low  = low_remote  if enable_low  else []
+
+    return sort_urls_by_mode(
+        local_urls,
+        use_high,
+        use_mid,
+        use_low
+    )
 
 # ============================
 # 名称规范化
@@ -142,7 +243,8 @@ def is_local_source(url: str, from_local_spider=False) -> bool:
         )
     return False  # 默认情况下不认为是本地源
 
-from urllib.parse import urlparse, parse_qsl, urlencode, urlunparse
+def score_of(u):
+    return cache.get(normalize_url(u), {}).get("score", 0)
 
 def normalize_url(url: str) -> str:
     if not url.startswith("http"):
@@ -234,7 +336,7 @@ def parse_m3u(content, channels, source_url=None, from_local_spider=False):
             add_channel(channels, last_name, line, source_url, from_local_spider)
             last_name = None
 
-def parse_tvbox_json(content, channels, source_url=None):
+def parse_tvbox_json(content, channels, source_url=None, from_local_spider=False):
     try:
         data = json.loads(content)
     except:
@@ -245,7 +347,7 @@ def parse_tvbox_json(content, channels, source_url=None):
             name = ch.get("name")
             urls = ch.get("urls") or []
             for url in urls:
-                add_channel(channels, name, url, source_url)
+                add_channel(channels, name, url, source_url, from_local_spider)
 
 def detect_and_parse(content, channels, source_url=None, from_local_spider=False):
     text = content.lstrip()
@@ -344,20 +446,7 @@ def build_output_txt(channels, mode, whitelist_order):
     # ============================
     # 排序模式 → 启用哪些质量档
     # ============================
-    if SORT_MODE in ("local_high", "high_local"):
-        ENABLE_HIGH = True
-        ENABLE_MID  = False
-        ENABLE_LOW  = False
-
-    elif SORT_MODE in ("local_high_mid", "high_local_mid", "high_mid_local"):
-        ENABLE_HIGH = True
-        ENABLE_MID  = True
-        ENABLE_LOW  = False
-
-    else:
-        ENABLE_HIGH = True
-        ENABLE_MID  = False
-        ENABLE_LOW  = False
+    ENABLE_HIGH, ENABLE_MID, ENABLE_LOW = get_quality_flags()
 
     # ============================
     # 电视台部分
@@ -376,50 +465,17 @@ def build_output_txt(channels, mode, whitelist_order):
             # 如果该频道在 channels 中不存在，跳过
             if name not in channels:
                 continue
-
             raw_urls = channels[name]
-
-            # 分离本地源和远程源
-            local_urls = [u for u in raw_urls if is_local_source(u)]
-            remote_urls = [u for u in raw_urls if not is_local_source(u)]
-
-            # 远程源按质量排序（只检测一次）
-            sorted_remote = detect_and_sort_urls(name, remote_urls)
-
-            # 直接从缓存读取（不会触发检测）
-            def score_of(u):
-                return cache.get(normalize_url(u), {}).get("score", 0)
-
-            # 分级（只执行一次）
-            high_remote = [u for u in sorted_remote if score_of(u) > 90]
-            mid_remote  = [u for u in sorted_remote if 80 <= score_of(u) <= 90]
-            low_remote  = [u for u in sorted_remote if score_of(u) < 80]
-
-            # 根据启用情况选择远程源
-            use_high = high_remote if ENABLE_HIGH else []
-            use_mid  = mid_remote  if ENABLE_MID  else []
-            use_low  = low_remote  if ENABLE_LOW  else []
-
             # ============================
-            # 排序逻辑（只执行一次）
+            # 排序逻辑
             # ============================
-            if SORT_MODE == "local_high":
-                urls = local_urls + use_high
-
-            elif SORT_MODE == "high_local":
-                urls = use_high + local_urls
-
-            elif SORT_MODE == "local_high_mid":
-                urls = local_urls + use_high + use_mid
-
-            elif SORT_MODE == "high_local_mid":
-                urls = use_high + local_urls + use_mid
-
-            elif SORT_MODE == "high_mid_local":
-                urls = use_high + use_mid + local_urls
-
-            else:
-                urls = local_urls + use_high
+            urls = get_sorted_urls(
+                name,
+                raw_urls,
+                ENABLE_HIGH,
+                ENABLE_MID,
+                ENABLE_LOW
+            )
 
             # 输出
             for url in urls:
@@ -501,22 +557,9 @@ def build_output_m3u(channels, mode, whitelist_order):
         return "媒体频道"
 
     # ============================
-    # 排序模式 → 启用哪些质量档（只执行一次）
+    # 排序模式 → 启用哪些质量档
     # ============================
-    if SORT_MODE in ("local_high", "high_local"):
-        ENABLE_HIGH = True
-        ENABLE_MID  = False
-        ENABLE_LOW  = False
-
-    elif SORT_MODE in ("local_high_mid", "high_local_mid", "high_mid_local"):
-        ENABLE_HIGH = True
-        ENABLE_MID  = True
-        ENABLE_LOW  = False
-
-    else:
-        ENABLE_HIGH = True
-        ENABLE_MID  = False
-        ENABLE_LOW  = False
+    ENABLE_HIGH, ENABLE_MID, ENABLE_LOW = get_quality_flags()
 
     # ============================
     # 电视台部分
@@ -535,48 +578,16 @@ def build_output_m3u(channels, mode, whitelist_order):
                 continue
 
             raw_urls = channels[name]
-
-            # 分离本地源和远程源
-            local_urls = [u for u in raw_urls if is_local_source(u)]
-            remote_urls = [u for u in raw_urls if not is_local_source(u)]
-
-            # 远程源按质量排序（只检测一次）
-            sorted_remote = detect_and_sort_urls(name, remote_urls)
-
-            # 直接从缓存读取（不会触发检测）
-            def score_of(u):
-                return cache.get(normalize_url(u), {}).get("score", 0)
-
-            # 分级（只执行一次）
-            high_remote = [u for u in sorted_remote if score_of(u) > 90]
-            mid_remote  = [u for u in sorted_remote if 80 <= score_of(u) <= 90]
-            low_remote  = [u for u in sorted_remote if score_of(u) < 80]
-
-            # 根据启用情况选择远程源
-            use_high = high_remote if ENABLE_HIGH else []
-            use_mid  = mid_remote  if ENABLE_MID  else []
-            use_low  = low_remote  if ENABLE_LOW  else []
-
             # ============================
-            # 排序逻辑（只执行一次）
+            # 排序逻辑
             # ============================
-            if SORT_MODE == "local_high":
-                urls = local_urls + use_high
-
-            elif SORT_MODE == "high_local":
-                urls = use_high + local_urls
-
-            elif SORT_MODE == "local_high_mid":
-                urls = local_urls + use_high + use_mid
-
-            elif SORT_MODE == "high_local_mid":
-                urls = use_high + local_urls + use_mid
-
-            elif SORT_MODE == "high_mid_local":
-                urls = use_high + use_mid + local_urls
-
-            else:
-                urls = local_urls + use_high
+            urls = get_sorted_urls(
+                name,
+                raw_urls,
+                ENABLE_HIGH,
+                ENABLE_MID,
+                ENABLE_LOW
+            )
 
             # ============================
             # 找到最佳远程源（第一个 score>0 的远程源）
